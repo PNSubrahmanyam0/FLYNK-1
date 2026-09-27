@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #090304;
+    color: #f5f5f5;
+  }
+}
+
+/* Glassy Red Custom Theme Utilities */
+.glass-red {
+  background: rgba(220, 38, 38, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(185, 28, 28, 0.15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-red-card {
+  background: linear-gradient(135deg, rgba(35, 10, 15, 0.75) 0%, rgba(16, 5, 8, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(239, 68, 68, 0.22);
+  box-shadow: 0 10px 30px -5px rgba(220, 38, 38, 0.18), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-red-surface {
+  background: rgba(26, 7, 11, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.glass-red-button {
+  background: linear-gradient(135deg, #dc2626 0%, #be123c 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(254, 202, 202, 0.35);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.glass-red-glow {
+  box-shadow: 0 0 30px -4px rgba(239, 68, 68, 0.35);
+}
+
+/* Starry Night & Midnight Blue Custom Theme Utilities (From User Reference Images) */
+/* Palette: #02060E, #0C1446, #0356C5, #2B5C92, #B3CDE0, #FFFFFF */
+.glass-midnight {
+  background: rgba(12, 20, 70, 0.45);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(43, 92, 146, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(3, 86, 197, 0.2), inset 0 1px 1px 0 rgba(179, 205, 224, 0.15);
+}
+
+.glass-midnight-card {
+  background: linear-gradient(135deg, rgba(12, 20, 70, 0.85) 0%, rgba(2, 6, 14, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(43, 92, 146, 0.35);
+  box-shadow: 0 10px 30px -5px rgba(3, 86, 197, 0.25), inset 0 1px 0 0 rgba(179, 205, 224, 0.2);
+}
+
+.glass-midnight-surface {
+  background: rgba(12, 20, 70, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(43, 92, 146, 0.3);
+}
+
+.glass-midnight-button {
+  background: linear-gradient(135deg, #0356C5 0%, #2B5C92 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(179, 205, 224, 0.4);
+  box-shadow: 0 4px 20px rgba(3, 86, 197, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.glass-midnight-glow {
+  box-shadow: 0 0 35px -2px rgba(3, 86, 197, 0.45), 0 0 15px rgba(43, 92, 146, 0.3);
+}
+
+/* Subtle Starry Night Grid Pattern */
+.starry-grid-bg {
+  background-image: 
+    radial-gradient(1.5px 1.5px at 20px 30px, #B3CDE0, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 90px 40px, #B3CDE0, rgba(0,0,0,0)),
+    radial-gradient(1.2px 1.2px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+    linear-gradient(to right, rgba(43, 92, 146, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 92, 146, 0.08) 1px, transparent 1px);
+  background-size: 200px 200px, 250px 250px, 180px 180px, 220px 220px, 24px 24px, 24px 24px;
+}
+
+/* Custom scrollbars for feeds and drawers */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.5);
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite linear;
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(220, 38, 38, 0.45), 0 0 15px rgba(239, 68, 68, 0.2); }
+  50% { box-shadow: 0 6px 28px rgba(220, 38, 38, 0.7), 0 0 25px rgba(239, 68, 68, 0.45); }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2.2s ease-in-out infinite;
+}
+

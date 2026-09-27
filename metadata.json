@@ -1,0 +1,6 @@
+{
+  "name": "FLYNK - Creator Video & Commerce Ecosystem",
+  "description": "Next-gen ecosystem uniting 30-second Short Trailers, 1-gesture linked Full-Length Videos, Creator Storefronts, Escrow checkout, and Encrypted Messaging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
